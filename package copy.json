@@ -1,0 +1,14 @@
+{
+  "name": "@zechasault/rotary-dial-date-picker",
+  "main": "b6c180f482dfad55@1724.js",
+  "version": "1724.0.0",
+  "homepage": "https://observablehq.com/@zechasault/rotary-dial-date-picker",
+  "author": {
+    "name": "Zack",
+    "url": "https://observablehq.com/@zechasault"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

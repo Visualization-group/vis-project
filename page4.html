@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Galaxy</title>
+    <link rel="stylesheet" type="text/css" href="./css/inspector.css">
+    <!-- <style>
+    span,p,h3,h4,a {
+        font-size:0;
+        color:#ffffff
+    }
+</style> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--    <script src="https://d3js.org/d3.v4.js"></script>-->
+    <script src="js/demo/d3.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body>
+<video src="vid/back1.mp4" autoplay muted loop style="width: 100%;position: absolute"></video>
+</body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <a type="button" href="index.html" style="position: absolute;top: 0;background:transparent">
+                <img src="img/home1.png" style="width: 20%;height: 20%;">
+            </a>
+        </div>
+        <div class="col-md-9"></div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown">
+                指标含义
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown open " style="width: 100%">
+                <li>
+                    <div class="btn btn-primary btn-block">
+                        【医院数目】
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-primary btn-block">
+                        1-1 综合医院
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-primary btn-block">
+                        1-2 中医医院
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-primary btn-block">
+                        1-3 专科医院
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-primary btn-block">
+                        1-4 基层医疗卫生机构
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        【医疗卫生相关人员数】
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        2-1 执业助理医师
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        2-2 执业医师
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        2-3 注册护士
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        2-4 其他技术人员
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-success btn-block">
+                        2-5 管理人员
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        【社区医疗中心数】
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-1 0张床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-2 1-9张床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-3 10-29张床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-4 30-49张床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-5 50-99张床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-info btn-block">
+                        3-6 100张及以上床位
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-warning btn-block">
+                        【医保参保人数】
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-warning btn-block">
+                        4-1 城镇职工
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-warning btn-block">
+                        4-2 城镇在岗职工
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-warning btn-block">
+                        4-3 城镇退休人员
+                    </div>
+                </li>
+                <li>
+                    <div class="btn btn-warning btn-block">
+                        4-4 城镇居民
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    
+    <!-- 第二行笑脸位置 -->
+    <div class="row">
+        <div class="col-md-12" id="smile">
+        </div>
+    </div>
+</div>
+<br><br>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    var width = document.getElementById('row1').offsetWidth
+    console.log(">>>", width)
+    var height = 400;
+
+</script>
+<script src="js/sb-admin-2.min.js"></script>
+
+
+<script type="module">
+
+    import define from "./js/demo/page4.js";
+    import { Runtime, Library, Inspector } from "./js/demo/runtime.js";
+
+    const runtime = new Runtime();
+    const main = runtime.module(define, Inspector.into(document.getElementById("smile")));
+
+    var sel = document.getElementsByClassName("observablehq");
+    for (let i = 2; i < sel.length;) {
+        sel[i].remove();
+    }
+
+    sel=document.getElementsByClassName("observablehq--inspect");
+    for(let i=0;i<sel.length;i++) sel[i].remove();
+</script>
+</body>
